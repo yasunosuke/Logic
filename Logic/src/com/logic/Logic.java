@@ -6,17 +6,21 @@ public class Logic {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		LogicScreen logicScreen = new LogicScreen(30, 30);
+		LogicScreen logicScreen = new LogicScreen();
 		logicScreen.init();
-//		logicScreen.displayPieces();
+		
 		while(true) {
 			logicScreen.draw();
+			
+			if(logicScreen.isCompleted()) {
+				break;
+			}
 			logicScreen.tryToSolve();
 		}
 		
-		
-		
+		logicScreen.drawAnswer();
 		
 	}
-
+		
 }
+

@@ -3,14 +3,14 @@ package com.logic;
 import com.game.library.VEC2;
 
 public class LogicPiece extends VEC2 {
-	private int questionNumber;
+	private String logicId;
 
-	public LogicPiece(int questionNumber, int x, int y) {
+	public LogicPiece(String logicId, int x, int y) {
 		super(x, y);
-		this.questionNumber = questionNumber;
+		this.logicId = logicId;
 	}
 
-	public int getQuestionNumber() {
-		return questionNumber;
+	public String getLogicId() {
+		return logicId;
 	}
 }
